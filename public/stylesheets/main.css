@@ -1,0 +1,163 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 100%;
+    background: repeat-y center/100% url("https://images.pexels.com/photos/207662/pexels-photo-207662.jpeg?cs=srgb&dl=book-shelves-book-stack-bookcase-207662.jpg&fm=jpg");
+}
+body div {
+    margin: 0;
+    padding: 0;
+    /* background-color: lightgreen; */
+}
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: #2d4758;
+    color: whitesmoke;
+    font: normal small-caps 700 1.5em Arial;
+    height: 4em;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+}
+nav {
+    margin: 0;
+    padding: 0;
+}
+nav ul {
+    /* list-style-type: none; */
+    margin: 0;
+    padding: 0;
+}
+nav li{
+    display: inline-block;
+}
+form{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 2em;
+    width: 20em;
+    border-radius: .5em;
+}
+form select {
+    border: none;
+    appearance: none;
+    text-align: center;
+    background-color: transparent;
+}
+form input {
+    border: none;
+    appearance: none;
+    background-color: transparent;
+}
+form button {
+    border: none;
+    appearance: none;
+    text-align: center;
+    background-color: white;
+    background-color: transparent;
+}
+
+
+
+main {
+    display: flex;
+    flex-grow: 1;
+    margin: 6em 0 auto;
+    padding: 0;
+}
+
+footer {
+    text-align: center;
+    color: whitesmoke;
+    background-color: #2d4758;
+    font: normal small-caps 600 1em Arial;
+    height: 6em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bookContainer {
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    gap: 1em;
+    padding: 2em;
+}
+
+.bookCard {
+    background-color: hsl(208, 100%, 97%, .95);
+    border-radius: 1em;
+    display: flex;
+    padding: 1em;
+    min-width: 300px;
+}
+
+.bookCover{
+    width: min-content;
+    height: max-content;
+}
+
+.bookDetails {
+    width:100%;
+    margin-left: 1em;
+
+    /* list-style-type: none; */
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, ul, li, p {
+    margin: 0;
+    line-height: normal;
+}
+
+h3{
+    margin-bottom: .5em;
+}
+
+p{
+    margin: .5em 0;
+}
+#description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 1200px) {
+    .bookContainer {
+        grid-template: 1fr 1fr / 1fr 1fr;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .bookContainer {
+        grid-template: 1fr 1fr 1fr / 1fr;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .bookContainer {
+        grid-template: 1fr 1fr 1fr / 1fr;
+        padding: .5em;
+    }
+    header{
+        flex-direction: column;
+        padding: .5em 0;
+    }
+    main {
+    margin-top: 8em;
+    }
+}

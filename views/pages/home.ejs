@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Book Finder</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//books.google.com/books/previewlib.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css"/>
+</head>
+<header>
+    <nav>
+    </nav>
+    <form id="searchForm" class="searchForm" method="POST">
+        <select name="searchSelect" id="searchSelect">
+            <option value="" selected>All</option>
+            <option value="intitle:">Title</option>
+            <option value="inauthor:">Author</option>
+            <option value="inpublisher:">Publisher</option>
+            <option value="subject:">Subject</option>
+            <option value="isbn:">ISBN</option>
+            <option value="lccn:">LCCN</option>
+            <option value="oclc:">OCLC</option>
+        </select>
+        <input id="inputSearch" placeholder="Title or Author"></input>
+        <button id="searchBTN" type="button">Search</button>
+    </form>
+</header>
+<body>
+    <main>
+        <div id="books" class="bookContainer"></div>
+    </main>
+</body>
+<footer>
+    <div id="copyright">Copyright &copy; 2020 Timothy Wells</div>
+    <div id="schoolProject">BYU-Idaho - WDD 330 - Front End Development II </div>
+</footer>
+<script type="text/javascript" src="/scripts/main.js"></script>
+</html>
