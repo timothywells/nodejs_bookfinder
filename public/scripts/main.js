@@ -1,13 +1,18 @@
-function bookSearch(){
+
     var search = document.getElementById('inputSearch').value
     var select = document.getElementById('searchSelect').value
+    
+function bookSearch(){
+
     document.getElementById('books').innerHTML = ""
-    console.log(search)
+    //console.log(search)
     $.ajax({
-        url: '/bookcall' ,
-        type: 'GET',
+        type: "GET",
+        url: "/bookcall",
+        //url: "https://www.googleapis.com/books/v1/volumes?q=" + select + search + "&maxResults=36&orderBy=relevance",
         data: {search: search, select: select},
-        dataType: 'json',
+        dataType: "json",
+        contentType: "application/json",
         success: forLoop,
         error: function() {
             alert("Please enter informatiion into the search field to find a book");          },
