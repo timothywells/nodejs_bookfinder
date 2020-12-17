@@ -4,6 +4,7 @@ html {
     height: 100%;
     width: 100%;
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -11,84 +12,117 @@ body {
     flex-direction: column;
     align-items: stretch;
     min-height: 100%;
-    background: repeat-y center/100% url("https://images.pexels.com/photos/207662/pexels-photo-207662.jpeg?cs=srgb&dl=book-shelves-book-stack-bookcase-207662.jpg&fm=jpg");
 }
+
+.parallax {
+    background-image: url("/media/small-book-shelf.jpg");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 body div {
     margin: 0;
     padding: 0;
-    /* background-color: lightgreen; */
+    /* bac
+    kground-color: lightgreen; */
 }
 header {
     display: flex;
     flex-direction: row;
-    background-color: #2d4758;
-    color: whitesmoke;
-    font: normal small-caps 700 1.5em Arial;
-    height: 4em;
+    background-color: rgba(0, 0, 0, .75);
+    height: 5em;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     position: fixed;
     width: 100%;
 }
-nav {
-    margin: 0;
-    padding: 0;
-}
-nav ul {
-    /* list-style-type: none; */
-    margin: 0;
-    padding: 0;
-}
-nav li{
-    display: inline-block;
-}
+
 form{
-    background-color: white;
+    padding: 0;
+    margin: 0;
+    background-color: #dddfd4;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    height: 2em;
-    width: 20em;
+    height: 2.5em;
     border-radius: .5em;
+    outline: none;
+    cursor: pointer;
 }
+
 form select {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
     border: none;
-    appearance: none;
+    text-align: -webkit-center;
     text-align: center;
-    background-color: transparent;
+    text-align: justify;
+    width: 25vw;
+    border-radius: .5em 0 0 .5em;
+    outline: none;
+    text-indent: 1em;
 }
+
+form select:hover{
+    background-color: rgba(245, 245, 245, 0.822);
+}
+
+form select option {
+    text-indent: .5em;
+}
+
 form input {
+    margin: 0;
+    padding: 0;
     border: none;
     appearance: none;
-    background-color: transparent;
+    width: 100%;
+    outline: none;
+    text-indent: 2em;
 }
+
 form button {
+    margin: 0;
+    padding: 0;
+    background-color: #005f00;
+    color: whitesmoke;
     border: none;
     appearance: none;
     text-align: center;
-    background-color: white;
-    background-color: transparent;
+    width: 25vw;
+    border-radius: 0 .5em .5em 0;
+    outline: none;
 }
 
-
+form button:hover {
+    background-color: #007C00;
+}
 
 main {
     display: flex;
     flex-grow: 1;
-    margin: 6em 0 auto;
+    margin: 5em 0 auto;
     padding: 0;
 }
 
 footer {
-    text-align: center;
-    color: whitesmoke;
-    background-color: #2d4758;
-    font: normal small-caps 600 1em Arial;
-    height: 6em;
+    background-color: rgba(0, 0, 0, .75);
+    height: 4em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.footer {
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font: normal small-caps 600 1em Arial;
 }
 
 .bookContainer {
@@ -99,25 +133,70 @@ footer {
 }
 
 .bookCard {
-    background-color: hsl(208, 100%, 97%, .95);
+    background-color:rgb(220, 222, 211, .9);
     border-radius: 1em;
     display: flex;
     padding: 1em;
     min-width: 300px;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    margin-bottom: 1em;
+}
+
+.row a{
+    height: max-content;
 }
 
 .bookCover{
     width: min-content;
-    height: max-content;
+    height: min-content;
 }
 
 .bookDetails {
     width:100%;
     margin-left: 1em;
-
-    /* list-style-type: none; */
 }
 
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.linkbtn{
+    width: 25%;
+    background-color: #1E5D1E;
+    height: max-content;
+}
+
+.linkbtn a {
+    display: flex;
+    color: whitesmoke;
+    height: 2em;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.linkbtn a:hover{
+    background-color: #00A900;
+    margin: 0;
+    padding: 0;
+}
+/* .readlink:hover{
+    background-color: #00A900;
+} */
 /* Typography */
 h1, h2, h3, h4, h5, ul, li, p {
     margin: 0;
@@ -133,7 +212,7 @@ p{
 }
 #description {
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;  
     overflow: hidden;
 }
