@@ -26,9 +26,8 @@ body {
 body div {
     margin: 0;
     padding: 0;
-    /* bac
-    kground-color: lightgreen; */
 }
+
 header {
     display: flex;
     flex-direction: row;
@@ -63,14 +62,17 @@ form select {
     border-radius: .5em 0 0 .5em;
     outline: none;
     text-indent: 1em;
+    appearance: none;    
+
 }
 
 form select:hover{
-    background-color: rgba(245, 245, 245, 0.822);
+    background-color: rgb(236, 236, 236);
 }
 
 form select option {
     text-indent: .5em;
+    background-color: whitesmoke;
 }
 
 form input {
@@ -94,6 +96,7 @@ form button {
     width: 25vw;
     border-radius: 0 .5em .5em 0;
     outline: none;
+    cursor: pointer;
 }
 
 form button:hover {
@@ -150,17 +153,17 @@ footer {
 }
 
 .row a{
-    height: max-content;
+    width: 50%;
 }
 
 .bookCover{
-    width: min-content;
-    height: min-content;
+    width: 100%;
 }
 
 .bookDetails {
     width:100%;
     margin-left: 1em;
+    margin-top: 1em;
 }
 
 .links {
@@ -194,9 +197,7 @@ footer {
     margin: 0;
     padding: 0;
 }
-/* .readlink:hover{
-    background-color: #00A900;
-} */
+
 /* Typography */
 h1, h2, h3, h4, h5, ul, li, p {
     margin: 0;
@@ -213,6 +214,13 @@ p{
 #description {
     display: -webkit-box;
     -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+#title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;  
     overflow: hidden;
 }
@@ -238,5 +246,12 @@ p{
     }
     main {
     margin-top: 8em;
+    }
+    form input {
+        text-indent: 1em;
+    }
+
+    form select{
+        text-indent: .25em;
     }
 }
