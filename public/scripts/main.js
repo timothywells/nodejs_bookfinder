@@ -48,7 +48,7 @@ function bookSearch(){
                             result += "<img class=bookCover src=" + data.items[i].volumeInfo.imageLinks.smallThumbnail + "/>"
                         }
                     } catch {
-                        result += "<img class=bookCover src=/media/nobook.jpg/>"
+                        result += "<img class=bookCover src=/media/nobook.jpg>"
                     }
                 result += "</a>"
                 result += "<div class=bookDetails>"
