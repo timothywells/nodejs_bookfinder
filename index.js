@@ -4,7 +4,7 @@ const request = require('request')
 const bodyparse = require('body-parser')
 const { json } = require('express')
 const PORT = process.env.PORT || 5000
-//const APIkey = "AIzaSyDdn6yzTBR15sshvZlumi1L_HVSpX3lvgk"
+const APIkey = "AIzaSyDdn6yzTBR15sshvZlumi1L_HVSpX3lvgk"
 
 express() 
   .use(express.static(path.join(__dirname, 'public')))
@@ -16,13 +16,13 @@ express()
     var search = req.body.search
     var select = req.body.select
     if (select == "") {
-        request.get("https://www.googleapis.com/books/v1/volumes?q=" + search + "&maxResults=36&orderBy=relevance&key=", { json: true }, (error, data) => {
+        request.get("https://www.googleapis.com/books/v1/volumes?q=" + search + "&maxResults=36&orderBy=relevance&key=" + APIkey, { json: true }, (error, data) => {
           if (error) { return console.log(err) }
           res.type('json')
           res.json(data.body)
         })
     } else {
-      request.get("https://www.googleapis.com/books/v1/volumes?q=" + select + search + "&maxResults=36&orderBy=relevance&key=", { json: true }, (error, data) => {
+      request.get("https://www.googleapis.com/books/v1/volumes?q=" + select + search + "&maxResults=36&orderBy=relevance&key=" + APIkey, { json: true }, (error, data) => {
         if (error) { return console.log(err) }
         res.type('json')
         res.json(data.body)
